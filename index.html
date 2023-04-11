@@ -19,10 +19,11 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
 
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container headerflex">
         <nav class="headernav">
           <a class="logo link" href="./index.html"
@@ -55,10 +56,10 @@
           </ul>
         </address>
       </div>
-    </header>
+    </header> -->
 
     <main>
-      <section class="hero section">
+      <!-- <section class="hero section">
         <div class="container">
           <h1 class="heroslogan">Effective Solutions for Your Business</h1>
           <button class="herobutton" type="button" data-modal-open>Order Service</button>
@@ -97,11 +98,12 @@
                 <textarea class="modalcomment" type="comment" id="comment" placeholder="Text input" rows="10"></textarea>
               </div>
               <fieldset class="field">
-                <label class="fieldlabel" for="policy">I accept the terms and conditions of the <a class="privacypolicy" href="./index.html">Privacy Policy</a>
+                <label class="fieldlabel" for="policy">
                 <input class="checkbox" type="checkbox" name="policy" id="policy">
                 <span class="checkicon"><svg width="10" height="8" class="iconsvg">
                   <use href="./images/icons.svg#icon-Vector"></use>
                   </svg></span>
+                  I accept the terms and conditions of the <a class="privacypolicy" href="./index.html">Privacy Policy</a>
                 </label>
               </fieldset>
               <button type="submit" class="formbutton">Send</button>
@@ -111,7 +113,7 @@
                 </svg></button>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section">
         <div class="container">
@@ -163,7 +165,7 @@
 
       <section class="section doing">
         <div class="container">
-          <h2 class="title">What are we doing</h2>
+          <h2 class="title titledoing">What are we doing</h2>
           <ul class="list doingflex">
             <li class="doingli">
               <img
@@ -197,7 +199,7 @@
       </section>
 
       <section class="section team">
-        <div class="container">
+        <div class="container containerteam">
           <h2 class="title">Our Team</h2>
           <ul class="list teamflex">
             <li class="teamli">
@@ -403,6 +405,7 @@
       </div>
       </div>
     </footer>
+
     <script src="./js/modal.js"></script>
     <script>
       (()=>{document .querySelector ("js-speaker-form")

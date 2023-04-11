@@ -28,13 +28,13 @@ body {
 }
 
 .container {
-  width: 1158px;
+  width: 396px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .section {
-  padding: 120px 0;
+  padding-bottom: 96px;
 }
 
 .image {
@@ -338,11 +338,11 @@ body {
 
 .modalinput:focus {
   border-color: var(--iris);
+  outline: none;
 }
 
-.modaldiv:focus .iconmodal {
-  color: var(--iris);
-  outline: none;
+.modalinput:focus + .iconmodal {
+  fill:var(--iris)
 }
 
 .modaldiv {
@@ -471,28 +471,13 @@ body {
 
 /*ABOUT*/
 
-.aboutlist {
-  display: flex;
-  gap: 24px;
-}
-
 .aboutli {
   display: block;
-  width: calc((100% - 72px) / 4);
+  width: 100%;
 }
 
-.abouttitle {
-  margin: 0 0 8px 0;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue);
-}
-
-.abouttext {
-  margin: 0;
-  letter-spacing: 0.02em;
+.aboutli:not(:last-child) {
+  margin-bottom: 72px;
 }
 
 .aboutlink {
@@ -506,15 +491,52 @@ body {
   justify-content: center;
 }
 
+.section .aboutlink {
+  display: none;
+}
+
+.abouttitle {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--navy-blue);
+}
+
+.abouttext {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
 /*WHAT ARE WE DOING*/
 
 .doing {
   padding-top: 0;
 }
 
+.section .doing {
+  display: none;
+  padding-bottom: 0;
+  margin: 0;
+}
+
 .doingflex {
   display: flex;
   gap: 24px;
+}
+
+.section .doingflex {
+  display: none;
+}
+
+.section .titledoing {
+  display: none;
 }
 
 /*OUR TEAM*/
@@ -523,7 +545,13 @@ body {
   background-color: var(--cloud);
 }
 
+.containerteam {
+  width: 264px;
+  padding: 0;
+}
+
 .title {
+  padding-top: 96px;
   margin: 0 0 72px 0;
   font-weight: 700;
   font-size: 36px;
@@ -535,12 +563,13 @@ body {
 }
 
 .teamflex {
-  display: flex;
-  gap: 24px;
+  padding: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .teamli {
-  width: calc((100% - 72px) / 4);
+  margin-bottom: 72px;
   background-color: var(--white);
 }
 
@@ -573,6 +602,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
+  padding-left: 0;
 }
 
 .teamsocitems {
@@ -606,12 +636,13 @@ body {
 
 .customersflex {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 72px 16px;
 }
 
 .customersli {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 24px) / 2);
   height: 88px;
 }
 
@@ -643,23 +674,24 @@ body {
 /*FOOTER*/
 
 .footer {
-  padding: 100px 0;
-  font-family: "Roboto", sans-serif;
+  padding: 96px 0;
   background-color: var(--navy-blue);
 }
 
 .contfooter {
-  display: flex;
-  align-items: baseline;
+  width: 100%;
 }
 
 .footerleft {
-  width: 264px;
-  margin-right: 120px;
+  width: 268px;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 72px;
 }
 
 .logofooter {
-  display: inline-block;
+  display: block;
+  text-align: center;
   margin-bottom: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -671,6 +703,9 @@ body {
 }
 
 .studiofooter {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: var(--cloud);
 }
 
@@ -684,8 +719,10 @@ body {
 
 .footercenter {
   margin-top: 0;
-  justify-content: center;
+  text-align: center;
   margin-right: auto;
+margin-left: auto;
+margin-bottom: 72px;
 }
 
 .footertextcenter {
@@ -731,26 +768,28 @@ body {
 }
 
 .footerright {
-  justify-content: center;
+  margin-top: 0;
+  text-align: center;
+  margin-right: auto;
+margin-left: auto;
 }
 
 .footerdiv {
-  display: flex;
+  display: block;
+  width: 100%;
 }
 
 .footerform {
   position: relative;
-  display: flex;
+  display: block;
+  width: 100%;
   align-items: center;
-  position: relative;
   gap: 24px;
 }
 
 .labelfooter {
   position: absolute;
   padding-left: 16px;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1, 17;
@@ -759,14 +798,16 @@ body {
 }
 
 .footerinput {
-  width: 264px;
+  width: 100%;
   height: 40px;
+  margin-bottom: 16px;
   border: 1px solid var(--white);
   border-radius: 4px;
   padding: 8px 16px;
   font-size: 12px;
   background-color: transparent;
   color: var(--white);
+  opacity: 0.6;
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -777,8 +818,6 @@ body {
 }
 
 .footerinput::placeholder {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -791,7 +830,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin: 0;
+  margin-top: 0;
+  text-align: center;
+  margin-right: auto;
+margin-left: auto;
   border: 0;
   padding: 8px 24px;
   height: 40px;
@@ -820,26 +862,29 @@ body {
 /*PORTFOLIO*/
 
 .section.portfolio {
-  padding-top: 96px;
+  padding-top: 48px;
+  display: block;
+  width: 100%;
 }
 
 .portfoliolist {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content:flex-start;
   align-items: center;
-  margin: 0 0 72px 0;
-  gap: 24px;
+  margin: 0 0 48px 0;
+  gap: 16px 24px;
 }
 
 .portfoliofilter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px 24px;
+  width: 100%;
+  display: block;
 }
 
 .portfoliofilterli {
-  width: calc((100% - 48px) / 3);
+  width: 100%;
   position: relative;
+  margin-bottom: 48px;
 }
 
 .portfoliolink {
@@ -866,7 +911,7 @@ body {
   color: var(--iris);
   background-color: var(--cloud);
   cursor: pointer;
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: 1px solid var(--cornflower);
   border-radius: 4px;
   transition-property: color, background-color, box-shadow, border;
