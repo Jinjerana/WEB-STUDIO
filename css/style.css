@@ -28,18 +28,19 @@ body {
 }
 
 .container {
-  width: 396px;
+  max-width: 396px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .section {
   padding-bottom: 96px;
+  padding-top: 96px;
 }
 
 .image {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -180,28 +181,40 @@ body {
 /*HERO*/
 
 .hero {
-  max-width: 1440px;
+  max-width: 396px;
+  height: auto;
   margin: 0 auto;
-  padding: 188px 0;
   text-align: center;
   background-color: var(--navy-blue);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/heroimage.jpg);
+    url(../images/heroimagemob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/heroimagemob2x.jpg);
+  }
+}
+
 .heroslogan {
-  width: 496px;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--white);
@@ -234,6 +247,7 @@ body {
 }
 
 .backdrop {
+width: 392px;
   position: fixed;
   top: 0;
   left: 0;
@@ -246,7 +260,7 @@ body {
   position: relative;
   top: 50%;
   left: 50%;
-  width: 408px;
+  width: 392px;
   padding: 72px 24px;
   text-align: left;
   border-radius: 4px;
@@ -293,8 +307,6 @@ body {
 
 .modalabout {
   margin: 0 0 16px;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -518,6 +530,7 @@ body {
 
 .doing {
   padding-top: 0;
+  display: none;
 }
 
 .section .doing {
@@ -546,12 +559,11 @@ body {
 }
 
 .containerteam {
-  width: 264px;
+  max-width: 396px;
   padding: 0;
 }
 
 .title {
-  padding-top: 96px;
   margin: 0 0 72px 0;
   font-weight: 700;
   font-size: 36px;
@@ -569,7 +581,8 @@ body {
 }
 
 .teamli {
-  margin-bottom: 72px;
+  width: 264px;
+  margin: 0 auto 72px;
   background-color: var(--white);
 }
 
@@ -642,7 +655,7 @@ body {
 }
 
 .customersli {
-  width: calc((100% - 24px) / 2);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
