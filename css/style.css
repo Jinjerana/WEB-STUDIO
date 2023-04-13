@@ -70,13 +70,14 @@ body {
 /*HEADER*/
 
 .header {
-  padding: 24px;
+  padding:24px 1px;
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .headerflex {
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,13 +89,9 @@ body {
   align-items: center;
 }
 
-.listmenu {
-  display: flex;
-  gap: 40px;
-}
-
 .logo {
   margin-right: 76px;
+  margin-left: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -108,74 +105,132 @@ body {
   color: var(--navy-blue);
 }
 
-.menu {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu::after {
-  content: "";
-  display: block;
-  opacity: 0;
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background-color: var(--ocean);
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu.stroke {
-  color: var(--ocean);
-}
-
-.menu:hover,
-.menu:focus {
-  color: var(--ocean);
-}
-
-.menu:hover::after,
-.menu:focus::after,
-.menu.stroke::after {
-  opacity: 1;
-}
-
-.contacts {
-  font-style: normal;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contactsflex {
-  display: flex;
-  gap: 40px;
-}
-
-.additem {
-  display: flex;
-}
-
+.listmenu,
+.contacts,
 .address {
-  letter-spacing: 0.02em;
+  display: none;
+}
+
+.hamburger {
+  mar gin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+
+.hamburgersvg {
+  width: 100%;
+}
+
+.mobmenu {
+  top: 0;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.moblistmenu {
+  padding-left: 40px;
+  padding-top: 80px;
+  padding-bottom: 284px;
+  gap: 40px;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: var(--navy-blue);
+}
+
+.moblistitem:not(:last-child) {
+  padding-bottom: 40px;
+}
+
+.mobaddress {
+  padding-left: 40px;
+  padding-bottom: 40px;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+}
+
+.mobmail {
+  padding-left: 40px;
+  padding-bottom: 48px;
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: var(--slate);
+}
+
+.mobmaila {
   color: var(--slate);
-  transition-property: color;
+}
+
+.mobsoclist {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  padding-left: 0;
+}
+
+.mobsocitems {
+  width: 40px;
+  height: 40px;
+}
+
+.mobsoclink {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address:hover,
-.address:focus {
-  color: var(--ocean);
+.mobsoclink:hover,
+.mobsoclink:focus {
+  background-color: var(--ocean);
+}
+
+.mobsocicon {
+  fill: var(--white);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: var(--navy-blue);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close:hover,
+.close:focus {
+  color: var(--white);
+  background-color: var(--ocean);
+}
+
+.closesvg {
+  fill: currentColor;
 }
 
 /*HERO*/
@@ -260,7 +315,8 @@ width: 392px;
   position: relative;
   top: 50%;
   left: 50%;
-  width: 392px;
+  width: calc(100% - 36px);
+  max-width: 392px;
   padding: 72px 24px;
   text-align: left;
   border-radius: 4px;
@@ -648,6 +704,7 @@ width: 392px;
 /*CUSTOMERS*/
 
 .customersflex {
+  max-width: 552px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -784,7 +841,7 @@ margin-bottom: 72px;
   margin-top: 0;
   text-align: center;
   margin-right: auto;
-margin-left: auto;
+
 }
 
 .footerdiv {

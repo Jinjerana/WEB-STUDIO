@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container headerflex">
         <nav class="headernav">
           <a class="logo link" href="./index.html"
@@ -55,8 +55,60 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="hamburger" data-menu-open>
+          <svg width="32" height="22" class="hamburgersvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"/></svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mobmenu" data-menu>
+        <div>
+        <button type="button" class="close" data-menu-close>
+          <svg width="8" height="8" class="closesvg">
+            <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="list moblistmenu">
+          <li class="moblistitem">
+            <a class="mobmenu mobstroke link" href="./index.html">Studio</a>
+          </li>
+          <li class="moblistitem">
+            <a class="mobmenu link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="moblistitem">
+            <a class="mobmenu link" href="">Contacts</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+          <div class="mobaddress">
+            <a class="mobaddressa link" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </div>
+          <div class="mobmail">
+            <a class="mobmaila link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </div>
+        
+          <ul class="mobsoclist list">
+            <li class="mobsocitems"><a href="" class="mobsoclink link">
+              <svg width="16" height="16" class="mobsocicon">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a></li>
+            <li class="mobsocitems"><a href="" class="mobsoclink link"> <svg width="16" height="16" class="mobsocicon">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg></a></li>
+            <li class="mobsocitems"><a href="" class="mobsoclink link"> <svg width="16" height="16" class="mobsocicon">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg></a></li>
+            <li class="mobsocitems"><a href="" class="mobsoclink link"> <svg width="16" height="16" class="mobsocicon">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     <main>
       <section class="hero section">
@@ -421,6 +473,7 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script>
       (()=>{document .querySelector ("js-speaker-form")
     .addEventListener ("submit",e=>{

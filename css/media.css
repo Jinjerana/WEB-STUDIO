@@ -46,11 +46,6 @@
         align-items: center;
       }
       
-      .listmenu {
-        display: flex;
-        gap: 40px;
-      }
-      
       .logo {
         margin-right: 76px;
         font-family: "Raleway", sans-serif;
@@ -64,9 +59,15 @@
       
       .studio {
         color: var(--navy-blue);
+      }      
+      
+      .listmenu {
+        display: flex;
+        gap: 40px;
       }
       
       .menu {
+        display: block;
         position: relative;
         display: block;
         font-weight: 500;
@@ -109,6 +110,7 @@
       }
       
       .contacts {
+        display: block;
         font-style: normal;
         justify-content: space-between;
         align-items: center;
@@ -124,6 +126,7 @@
       }
       
       .address {
+        display: block;
         letter-spacing: 0.02em;
         color: var(--slate);
         transition-property: color;
@@ -141,6 +144,7 @@
     .hero {
         max-width: 768px;
         padding: 188px 0;
+        padding: 112px 0;
         background-image: linear-gradient(
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
@@ -177,7 +181,7 @@
       }
       
       .modal {
-        width: 408px;
+        max-width: 408px;
       }
 
     /*ABOUT-TAB*/
@@ -186,12 +190,18 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        gap: 72px 24px;
       }
       
       .aboutli {
         width: calc((100% - 24px) / 2);
+        margin: 0;
       }
       
+      .aboutli:not(:last-child) {
+  margin-bottom: 0;
+}
+
       .abouttitle {
         text-align: left;
       }
@@ -216,7 +226,10 @@
       /*CUSTOMERS-TAB*/
 
       .customersflex {
+        max-width: 582px;
         gap: 72px 24px;
+        margin-left: auto;
+        margin-right: auto;
       }
       
       .customersli {
@@ -226,6 +239,7 @@
       /*FOOTER-TAB*/
 
       .contfooter {
+        max-width: 582px;
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
@@ -234,6 +248,7 @@
       .footerleft {
         width: 264px;
         margin-right: 24px;
+        margin-left: 0;
       }
       
       .logofooter {
@@ -562,6 +577,7 @@
       /*CUSTOMERS-DESK*/
 
       .customersflex {
+        max-width: 1440px;
         gap: 24px;
       }
       
