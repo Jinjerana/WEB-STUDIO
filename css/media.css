@@ -27,12 +27,6 @@
     }
 
     /*HEADER-TAB*/
-    .header {
-        padding: 24px;
-        border-bottom: 1px solid var(--cornflower);
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-          0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-      }
       
       .headerflex {
         display: flex;
@@ -44,6 +38,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-right: 121px;
       }
       
       .logo {
@@ -76,6 +71,11 @@
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .mobmenu,
+      .hamburger {
+        display: none;
       }
       
       .menu::after {
@@ -110,15 +110,15 @@
       }
       
       .contacts {
-        display: block;
+        display: flex;
         font-style: normal;
-        justify-content: space-between;
-        align-items: center;
       }
       
       .contactsflex {
         display: flex;
-        gap: 40px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 12px;
       }
       
       .additem {
@@ -318,13 +318,6 @@
 
     /*HEADER-DESK*/
 
-    .header {
-        padding: 24px;
-        border-bottom: 1px solid var(--cornflower);
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-          0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-      }
-      
       .headerflex {
         display: flex;
         justify-content: space-between;
@@ -335,26 +328,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-right: 332px;
       }
       
       .listmenu {
         display: flex;
         gap: 40px;
-      }
-      
-      .logo {
-        margin-right: 76px;
-        font-family: "Raleway", sans-serif;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: var(--iris);
-      }
-      
-      .studio {
-        color: var(--navy-blue);
       }
       
       .menu {
@@ -368,63 +347,12 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
       
-      .menu::after {
-        content: "";
-        display: block;
-        opacity: 0;
-        position: absolute;
-        bottom: -25px;
-        left: 0;
-        height: 4px;
-        width: 100%;
-        border-radius: 2px;
-        background-color: var(--ocean);
-        transition-property: opacity;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .menu.stroke {
-        color: var(--ocean);
-      }
-      
-      .menu:hover,
-      .menu:focus {
-        color: var(--ocean);
-      }
-      
-      .menu:hover::after,
-      .menu:focus::after,
-      .menu.stroke::after {
-        opacity: 1;
-      }
-      
-      .contacts {
-        font-style: normal;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
       .contactsflex {
         display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
         gap: 40px;
-      }
-      
-      .additem {
-        display: flex;
-      }
-      
-      .address {
-        letter-spacing: 0.02em;
-        color: var(--slate);
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .address:hover,
-      .address:focus {
-        color: var(--ocean);
+        width: 344px;
       }
     
       /*HERO-DESK*/

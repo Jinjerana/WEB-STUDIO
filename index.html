@@ -55,17 +55,43 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="hamburger" data-menu-open>
-          <svg width="32" height="22" class="hamburgersvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"/></svg>
+        <button
+          class="hamburger js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
         </button>
       </div>
-      <div class="mobmenu" data-menu>
-        <div>
-        <button type="button" class="close" data-menu-close>
-          <svg width="8" height="8" class="closesvg">
-            <use href="./images/icons.svg#icon-close"></use>
-            </svg>
+      <div class="mobmenu js-menu-container" id="mobile-menu">
+        <button class="close js-close-menu">
+          <svg
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
         </button>
+        <div>
         <ul class="list moblistmenu">
           <li class="moblistitem">
             <a class="mobmenu mobstroke link" href="./index.html">Studio</a>
@@ -77,8 +103,8 @@
             <a class="mobmenu link" href="">Contacts</a>
           </li>
         </ul>
-      </div>
-      <div>
+        </div>
+        <div>
           <div class="mobaddress">
             <a class="mobaddressa link" href="tel:+110001111111"
               >+11 (000) 111-11-11</a
@@ -106,7 +132,9 @@
                 <use href="./images/icons.svg#icon-linkedin"></use>
               </svg></a></li>
           </ul>
+          
         </div>
+        
       </div>
     </header>
 

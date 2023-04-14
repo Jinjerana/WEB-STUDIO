@@ -79,8 +79,18 @@ body {
 .headerflex {
   padding: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.header .container {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .headerflex {
+  width: 100%;
 }
 
 .headernav {
@@ -90,7 +100,7 @@ body {
 }
 
 .logo {
-  margin-right: 76px;
+  margin-right: auto;
   margin-left: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -112,21 +122,33 @@ body {
 }
 
 .hamburger {
-  mar gin-left: auto;
-  border: none;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  display: block;
+  margin-left: auto;
 }
 
-.hamburgersvg {
-  width: 100%;
-}
 
 .mobmenu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   top: 0;
   background-color: var(--white);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .moblistmenu {
@@ -144,6 +166,17 @@ color: var(--navy-blue);
 
 .moblistitem:not(:last-child) {
   padding-bottom: 40px;
+}
+
+.menu .link {
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+  text-decoration: underline;
 }
 
 .mobaddress {
