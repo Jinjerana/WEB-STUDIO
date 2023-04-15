@@ -182,6 +182,8 @@ color: var(--navy-blue-modal);
   color: var(--ocean);
 }
 
+.mob
+
 .moblistitem:not(:last-child) {
   margin-bottom: 40px;
 }
